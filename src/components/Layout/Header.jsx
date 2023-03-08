@@ -8,7 +8,7 @@ const Header = (properties) => {
     <Fragment>
       <header className={styles.header}>
         <h1>Food Delivery</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={properties.onShowCart} />
       </header>
       <section className={styles["cover-image"]}>
         <img src={coverImage} alt="A table full of delicious food." />

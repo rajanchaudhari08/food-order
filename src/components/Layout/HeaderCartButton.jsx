@@ -2,10 +2,10 @@ import { Fragment } from "react";
 import CartIcon from "../Cart/CartIcon";
 import styles from "./HeaderCartButton.module.css";
 
-const HeaderCartButton = () => {
+const HeaderCartButton = (properties) => {
   return (
     <Fragment>
-      <button className={styles.button}>
+      <button className={styles.button} onClick={properties.onClick}>
         <span className={styles.icon}>
           <CartIcon />
         </span>
