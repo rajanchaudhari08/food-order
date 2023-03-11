@@ -6,7 +6,6 @@ const defaultCartState = {
 };
 const reducerCart = (state, action) => {
   if (action.type === "ADD_ITEM_TO_CART") {
-    console.log("starting items");
     const updatedItemsTotalAmount =
       state.totalAmount + action.item.price * action.item.amount;
 
@@ -26,9 +25,7 @@ const reducerCart = (state, action) => {
     } else {
       updatedItemsAmount = state.items.concat(action.item);
     }
-
-    console.log({ updatedItemsAmount });
-
+    // console.log({ updatedItemsAmount });
     return {
       items: updatedItemsAmount,
       totalAmount: updatedItemsTotalAmount,
@@ -52,7 +49,7 @@ const reducerCart = (state, action) => {
       updatedItemsAmount = [...state.items];
       updatedItemsAmount[existingCartItemIndex] = updatedItemAmount;
     }
-    console.log({ updatedItemsAmount });
+    // console.log({ updatedItemsAmount });
     return {
       items: updatedItemsAmount,
       totalAmount: updatedItemsTotalAmount,
