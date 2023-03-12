@@ -11,7 +11,7 @@ const AvailableMeals = () => {
   useEffect(() => {
     const fetchMealItems = async () => {
       const response = await fetch(
-        "https://food-order-67003-default-rtdb.firebaseio.com/"
+        "https://food-order-67003-default-rtdb.firebaseio.com/MealItems.json"
       );
       if (!response.ok) {
         throw new Error("We are not able to fetch data for server.");
@@ -32,7 +32,7 @@ const AvailableMeals = () => {
 
     fetchMealItems().catch((error) => {
       setIsLoading(false);
-      setFetchError("We are not able to fetch data for server.");
+      setFetchError("We are not able to fetch data for server."); 
       // setFetchError(error.message);
     });
   }, []);
